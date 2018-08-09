@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:600|Montserrat');
+/* HEADER STYLE CODES */
+@media only screen and (max-width: 999px) {
+
+.navbar-brand {
+    background: url('images/logo.png');
+    width: 200px;
+    height: 90px;
+}
+
+header {
+    height: 200px;
+    background-image: url("images/about_cover_image.jpg");
+    background-position: 0px 400px;
+    padding-top: 40px;
+    padding-left: 80px;
+}
+
+header nav ul li {
+    text-align: center;
+}
+
+header nav ul li a {
+    font-size: 1.2rem;
+    color: #FFFFFF!important;
+    font-weight: 500;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: -1px;
+}
+
+header nav {    
+    background: rgba(29, 140, 184, 0.6);
+}
+
+header nav a.navbar-brand {
+    color: #FFFFFF!important;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul li:hover {
+    padding-left: 15px;
+    transition: .4s padding-left;
+}
+
+header nav ul li:not( :hover ){ padding-left: 0px;
+    transition: .2s padding-left; }
+
+    header h1 {
+        padding-top: 80px;
+        padding-left: 80px;
+color: #FFFFFF;
+font-size: 2.4rem;
+font-weight: bold;
+}
+
+wrapper {
+    background: rgba(29, 140, 184, 0.6);
+}
+
+    /* CONTAINER STYLE CODES */
+    #container {
+        background-color: #ffffff;
+    }
+
+    #container p {
+        word-break: break-all;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    /* FOOTER STYLE CODES */
+
+    footer {
+        background: #00AEF0;
+        line-height: 60px;
+    }
+
+    footer span {
+        color: white;
+        font-family: 'Montserrat' , sans-serif;
+    }
+
+    .mTop {
+        margin-top: 15px;
+    }
+
+    .mBottom {
+        margin-bottom: 15px;
+    }
+
+    .card-img-top {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+}

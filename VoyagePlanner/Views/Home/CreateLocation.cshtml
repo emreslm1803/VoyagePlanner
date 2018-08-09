@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div id="container" class="row d-flex justify-content-center py-5">
+    <div class="col-lg-4">
+        <form asp-controller="Demo" asp-action="Register" method="post" action="/CreateLocation">
+            Location Name:<input class="form-control" type="text" name="LocationName" /><br />
+            Location Code:<input class="form-control" type="text" name="LocationCode" /><br />
+            Country:<input class="form-control" type="text" name="Country" /><br />
+            City:<input class="form-control" type="text" name="City" /><br />
+            Postal Code:<input class="form-control" type="text" name="PostalCode" /><br />
+            Company Name:<input class="form-control" type="text" name="CompanyName" /><br />
+            <input class="form-control" type="submit" value="Send" /><br />
+        </form>
+    </div>
+</div>

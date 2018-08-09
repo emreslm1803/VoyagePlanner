@@ -1,0 +1,52 @@
+﻿
+@using VoyagePlanner;
+@{
+    
+    ViewData["Title"] = "ListLocation";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+@{ 
+    List<Location> location = ViewData["Location"] as List<Location>;
+    List<VoyagePlan> voyagePlan = ViewData["VoyagePlan"] as List<VoyagePlan>;
+}
+
+<div id="container" class="row d-flex justify-content-center m-0">
+    <table class="table table-hover col-lg-12">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Created By</th>
+                <th scope="col">Created On</th>
+                <th scope="col">Modified By</th>
+                <th scope="col">Modified On</th>
+                <th scope="col">Departure Time</th>
+                <th scope="col">Arrival Time</th>
+                <th scope="col">Location ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in voyagePlan)
+            {
+
+                string arrival = item.ArrivalTime.ToString();
+                string r;
+                if (arrival == "1/1/0001 12:00:00 AM") { r = " - "; }
+                else { r = item.ArrivalTime.ToString(); }
+
+                <tr>
+                    <th scope="row">@item.ID</th>
+                    <td>@item.CreatedBy</td>
+                    <td>@item.CreatedOn</td>
+                    <td>@item.ModifiedBy</td>
+                    <td>@item.ModifiedOn</td>
+                    <td>@item.DepartureTime</td>
+                    <td class="arrivalTime">@r</td>
+                    <td><a href=ListLocation/@item.LocationID>@item.LocationID</a></td>
+                </tr>
+             }
+
+        </tbody>
+    </table>
+</div>

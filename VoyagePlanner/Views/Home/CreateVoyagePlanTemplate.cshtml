@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+@model IEnumerable<VoyagePlanner.Location>
+
+<div id="container" class="row d-flex justify-content-center py-5">
+
+    <div class="col-lg-4">
+        <form asp-controller="Demo" asp-action="Register" method="post" action="/CreateVoyagePlanTemplate">
+            VoyagePlan Number: <input class="form-control" type="text" name="voyagePlanNumber" /><br />
+            Day  Of Week Arrival: <input class="form-control" type="datetime-local" name="DayOfWeekArrival" /><br />
+            Day Of Week Departure: <input class="form-control" type="datetime-local" name="DayOfWeekDeparture" /><br />
+            Departure Time: <input class="form-control" type="time" name="DepartureTime" /><br />
+            Arrival Time: <input class="form-control" type="time" name="ArrivalTime" /><br />
+            Start Location: <select name="LocationID" class="form-control">
+                @foreach (var item in Model)
+                {
+                    <option value="@item.ID">Company - Location Code: @item.CompanyName - @item.LocationCode</option>
+                }
+
+            </select><br />
+            <input class="form-control" type="submit" value="Send" /><br />
+        </form>
+    </div>
+</div>
